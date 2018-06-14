@@ -1,0 +1,15 @@
+{
+  "name": "jembi algorithm test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "f.js",
+  "scripts": {
+    "test": "mocha -w test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
