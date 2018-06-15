@@ -14,13 +14,13 @@ describe('Test objects', function() {
     { d: 1, e: '2' },
     { a: 1, b: 'q' }
   ]
-  it('should extract numbers that have an odd number: ' + inspect(n) + ' => ' + inspect(f(n)), () => {
+  it('should extract numbers that have an odd number:\n       ' + inspect(n) + ' => ' + inspect(f(n)), () => {
     expect(f(n)).have.members([ 1, 3, 7 ]);
   });
-  it('should extract strings that have an odd number: ' + inspect(s) + ' => ' + inspect(f(s)), () => {
+  it('should extract strings that have an odd number:\n       ' + inspect(s) + ' => ' + inspect(f(s)), () => {
     expect(f(s)).has.members([ 'a', 'c', 'aa', 'd', 'bb' ]);
   });
-  it('should not extract any objects (objects by ref): ' + inspect(o) + ' should remain the same', () => {
+  it('should not extract any objects (objects by ref):\n       ' + inspect(o).replace(/\n/g, `\n       `) + ' => remain the same', () => {
     expect(f(o)).to.be.an('array').that.deep.equals(o);
   });
   it('should get empty for an empty array: [] => []', () => {
